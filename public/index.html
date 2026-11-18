@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FRIDAY</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SIGN-IN SCREEN (Season 1 project: a sign-in app) -->
+    <section id="auth" class="screen">
+      <div class="card">
+        <div class="logo">◐</div>
+        <h1>FRIDAY</h1>
+        <p class="tag">Sign in to wake your assistant.</p>
+        <form id="authForm">
+          <input id="name" type="text" placeholder="Your name" autocomplete="name" required />
+          <input id="pass" type="password" placeholder="A passcode (remembered on this device)" required />
+          <button type="submit" id="authBtn">Continue</button>
+        </form>
+        <p id="authMsg" class="msg"></p>
+      </div>
+    </section>
+
+    <!-- CHAT SCREEN -->
+    <section id="chat" class="screen hidden">
+      <header>
+        <div class="who">
+          <span class="dot"></span>
+          <strong>FRIDAY</strong>
+          <small id="greeting"></small>
+        </div>
+        <button id="signout" class="ghost">Sign out</button>
+      </header>
+      <main id="messages"></main>
+      <form id="chatForm">
+        <input id="msg" type="text" placeholder="Ask FRIDAY anything…" autocomplete="off" required />
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

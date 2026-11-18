@@ -1,0 +1,12 @@
+{
+  "name": "friday-converge",
+  "version": "1.0.0",
+  "description": "FRIDAY - a sign-in + chat AI assistant built for Converge (Season 1: Spark). Powered by Groq.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "usman",
+  "license": "MIT"
+}
