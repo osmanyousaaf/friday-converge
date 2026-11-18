@@ -10,13 +10,13 @@
     <!-- SIGN-IN SCREEN (Season 1 project: a sign-in app) -->
     <section id="auth" class="screen">
       <div class="card">
-        <div class="logo">◐</div>
+        <div class="orb"></div>
         <h1>FRIDAY</h1>
         <p class="tag">Sign in to wake your assistant.</p>
         <form id="authForm">
           <input id="name" type="text" placeholder="Your name" autocomplete="name" required />
           <input id="pass" type="password" placeholder="A passcode (remembered on this device)" required />
-          <button type="submit" id="authBtn">Continue</button>
+          <button type="submit" id="authBtn">Continue →</button>
         </form>
         <p id="authMsg" class="msg"></p>
       </div>
@@ -26,16 +26,21 @@
     <section id="chat" class="screen hidden">
       <header>
         <div class="who">
-          <span class="dot"></span>
+          <span class="mini-orb"></span>
           <strong>FRIDAY</strong>
           <small id="greeting"></small>
         </div>
-        <button id="signout" class="ghost">Sign out</button>
+        <div class="actions">
+          <button id="clear" class="ghost">Clear</button>
+          <button id="signout" class="ghost">Sign out</button>
+        </div>
       </header>
       <main id="messages"></main>
       <form id="chatForm">
-        <input id="msg" type="text" placeholder="Ask FRIDAY anything…" autocomplete="off" required />
-        <button type="submit" id="sendBtn">Send</button>
+        <textarea id="msg" rows="1" placeholder="Ask FRIDAY anything…  (Enter to send, Shift+Enter for a new line)" required></textarea>
+        <button type="submit" id="sendBtn" title="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
       </form>
     </section>
 
